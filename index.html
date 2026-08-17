@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#e9f1f8" />
 
   <title>השקמה 19 בת ים · הרשמה לסיור דירות | שווים יותר</title>
-  <meta name="description" content="דירת 5 חדרים חדשה בפרויקט השקמה 19 בת ים — 3 דקות הליכה מהרכבת הקלה, 700 מטר מהים, פארק צמוד ואכלוס תוך חודשיים. הירשמו לסיור היכרות בשטח ביום שישי 28.08." />
+  <meta name="description" content="דירת 5 חדרים חדשה בפרויקט השקמה 19 בת ים, 1,000,000 ₪ מתחת למחיר הממוצע בעיר. הבניין בנוי ונותרו 5 דירות בלבד. הירשמו לסיור בשטח ביום שישי 28.08." />
   <meta property="og:title" content="השקמה 19 בת ים · סיור דירות | שווים יותר" />
-  <meta property="og:description" content="5 חדרים ב-2,490,000 ₪ · 3 דקות מהרכבת הקלה · 700 מ' מהים · אכלוס תוך חודשיים. סיור בשטח ביום שישי 28.08 — מספר המקומות מוגבל." />
+  <meta property="og:description" content="5 חדרים ב-2,490,000 ₪, מיליון מתחת לממוצע העיר. נותרו 5 דירות בלבד. סיור בשטח ביום שישי 28.08, מספר המקומות מוגבל." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="he_IL" />
   <meta property="og:image" content="https://shavimyoter2024-a11y.github.io/batyam/images/building-1.jpg" />
@@ -89,8 +89,15 @@
     }
     .hero__kicker .pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 0 rgba(201,152,46,.45); animation: pulse 2.4s infinite; }
     @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(201,152,46,.45)} 70%{box-shadow:0 0 0 9px rgba(201,152,46,0)} 100%{box-shadow:0 0 0 0 rgba(201,152,46,0)} }
-    h1 { font-family: "Heebo", sans-serif; font-weight: 900; font-size: clamp(34px, 5.6vw, 56px); line-height: 1.12; letter-spacing: -1.2px; margin: 0 0 16px; }
+    h1 { font-family: "Heebo", sans-serif; font-weight: 900; font-size: clamp(31px, 5.4vw, 52px); line-height: 1.18; letter-spacing: -1.2px; margin: 0 0 16px; }
     h1 em { font-style: normal; color: var(--gold); }
+    h1 .hl {
+      font-style: normal; color: #2b2109;
+      background: linear-gradient(135deg, var(--gold-hi), #f2cf7d);
+      padding: 2px 12px; border-radius: 12px;
+      box-decoration-break: clone; -webkit-box-decoration-break: clone;
+      box-shadow: 0 8px 22px rgba(201,152,46,.3);
+    }
     .hero__sub { font-size: clamp(17px, 2.4vw, 19.5px); color: var(--muted); max-width: 620px; margin: 0 0 28px; }
     .hero__cta-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
     .btn-main {
@@ -120,9 +127,20 @@
       box-shadow: 0 6px 18px rgba(31,58,88,.14);
     }
 
+    .price-hero {
+      margin-top: 36px; text-align: center;
+      background: linear-gradient(135deg, rgba(232,189,87,.42), rgba(255,255,255,.6));
+      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(201,152,46,.55); border-radius: 22px;
+      padding: 24px 20px 20px; box-shadow: 0 16px 38px rgba(201,152,46,.24);
+    }
+    .price-hero .label { display: block; font-weight: 700; font-size: 15px; color: #7a5c12; margin-bottom: 2px; }
+    .price-hero b { display: block; font-family: "Heebo"; font-weight: 900; font-size: clamp(40px, 8vw, 58px); letter-spacing: -1.5px; color: #2b2109; line-height: 1.08; }
+    .price-hero .note { display: block; font-size: 14.5px; color: var(--muted); margin-top: 6px; }
+
     .stats {
       display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px;
-      margin-top: 40px;
+      margin-top: 12px;
     }
     .stat {
       background: var(--glass); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
@@ -160,6 +178,17 @@
     .gallery img { display: block; width: 100%; height: 100%; min-height: 180px; object-fit: cover; transition: transform .8s var(--ease); }
     .gallery a:hover img { transform: scale(1.04); }
     .gallery__note { font-size: 13px; color: var(--muted); margin-top: 12px; }
+
+    /* גרף מדלן */
+    .madlan { display: grid; grid-template-columns: 1fr .85fr; gap: clamp(24px, 4vw, 48px); align-items: center; }
+    @media (max-width: 860px) { .madlan { grid-template-columns: 1fr; } }
+    .madlan__img {
+      border-radius: 22px; padding: 10px; max-width: 420px; margin-inline: auto;
+      background: var(--glass); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--g-border); box-shadow: var(--g-shadow);
+    }
+    .madlan__img img { display: block; width: 100%; height: auto; border-radius: 14px; }
+    .madlan__src { font-size: 13px; color: var(--muted); text-align: center; margin: 10px 0 2px; }
 
     .tour {
       background: var(--glass); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
@@ -204,6 +233,31 @@
 
     .reveal { opacity: 0; transform: translateY(22px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
     .reveal.in { opacity: 1; transform: none; }
+
+    /* מובייל: הכול מיושר למרכז וקומפקטי */
+    @media (max-width: 720px) {
+      .hero { padding: 100px 0 26px; }
+      .hero__grid { gap: 22px; }
+      .hero__grid > div:first-child { text-align: center; }
+      .hero__kicker { font-size: 13px; padding: 6px 13px; }
+      .hero__sub { margin-inline: auto; }
+      .hero__cta-row { flex-direction: column; align-items: stretch; gap: 12px; }
+      .btn-main { width: 100%; justify-content: center; }
+      .hero__alt { text-align: center; }
+      .hero__media { padding: 9px; }
+      .price-hero { margin-top: 26px; }
+      .stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .stat { text-align: center; padding: 14px 10px; }
+      section { padding: 34px 0; }
+      h2, .sect-sub { text-align: center; }
+      .sect-sub { margin-inline: auto; margin-bottom: 22px; }
+      .card { text-align: center; }
+      .card .ico { margin-inline: auto; }
+      .gallery__note { text-align: center; }
+      .tour__when { align-items: center; }
+      .tour h2 + .sect-sub { text-align: center; }
+      footer { text-align: center; }
+    }
   </style>
 </head>
 <body>
@@ -220,21 +274,25 @@
         <div class="hero__grid">
           <div>
             <span class="hero__kicker"><span class="pulse"></span> סיור בשטח · יום שישי 28.08 · מספר המקומות מוגבל</span>
-            <h1 class="display">דירת 5 חדרים חדשה בבת ים,<br /><em>700 מטר מהים.</em></h1>
-            <p class="hero__sub">פרויקט השקמה 19 של רויאל גארדן — במיקום המבוקש בבת ים: 3 דקות הליכה מהרכבת הקלה, פארק ממש ליד הבית, ואכלוס כבר בעוד חודשיים. בואו לראות את זה מקרוב.</p>
+            <h1 class="display">דירת 5 חדרים חדשה בבת ים,<br /><span class="hl">1,000,000 ₪ מתחת למחיר הממוצע בעיר</span></h1>
+            <p class="hero__sub">הבניין כבר עומד ברחוב השקמה 19, והדירות מוכנות למגורים. בסיור הקרוב תראו אותן במו עיניכם.</p>
             <div class="hero__cta-row">
-              <a class="btn-main" href="#register">נרשמים לסיור — ללא עלות</a>
+              <a class="btn-main" href="#register">נרשמים לסיור ללא עלות</a>
               <span class="hero__alt">מעדיפים שיחה אישית? <a href="./meeting/" id="meetingLink">קבעו פגישה במשרדי המכירות ›</a></span>
             </div>
           </div>
           <div class="hero__media reveal">
-            <img src="./images/building-1.jpg" alt="הדמיית פרויקט השקמה 19 בת ים — בניין מגורים חדש עם מרפסות" width="2191" height="1578" fetchpriority="high" />
-            <span class="tag">הדמיה · השקמה 19, בת ים</span>
+            <img src="./images/building-1.jpg" alt="פרויקט השקמה 19 בת ים, בניין מגורים חדש עם מרפסות" width="2191" height="1578" fetchpriority="high" />
+            <span class="tag">השקמה 19, בת ים</span>
           </div>
         </div>
+        <div class="price-hero reveal">
+          <span class="label">מחיר הדירה בהשקמה 19</span>
+          <b>2,490,000 ₪</b>
+          <span class="note">לפי מדלן, דירת 5 חדרים בבת ים נמכרת בממוצע ב־3.49 מיליון ₪</span>
+        </div>
         <div class="stats reveal">
-          <div class="stat"><b>5 חדרים</b><span>דירה מרווחת</span></div>
-          <div class="stat"><b>2,490,000 ₪</b><span>מחיר הדירה</span></div>
+          <div class="stat"><b>5 דירות</b><span>בלבד נותרו למכירה</span></div>
           <div class="stat"><b>3 דק'</b><span>הליכה לרכבת הקלה</span></div>
           <div class="stat"><b>700 מ'</b><span>מקו החוף</span></div>
           <div class="stat"><b>חודשיים</b><span>עד אכלוס</span></div>
@@ -242,17 +300,31 @@
       </div>
     </div>
 
+    <section id="market">
+      <div class="wrap">
+        <div class="madlan">
+          <div>
+            <h2 class="display reveal">המחיר הזה נשמע טוב מכדי להיות אמיתי?</h2>
+            <p class="sect-sub reveal" style="margin-bottom:0">בדקו בעצמכם. כך נראות מגמות המחירים של דירות 5 חדרים בבת ים באתר מדלן. ההזדמנות הזאת קיימת רק כי היזם רוצה לסיים את המכירה לפני האכלוס.</p>
+          </div>
+          <div>
+            <div class="madlan__img reveal">
+              <img src="./images/madlan-graph.jpg" alt="גרף מגמות מחירים ממדלן: דירת 5 חדרים בבת ים בממוצע 3.49 מיליון שקלים" loading="lazy" />
+            </div>
+            <p class="madlan__src">מקור: madlan.co.il, עדכון 15.8.2026</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section>
       <div class="wrap">
         <h2 class="display reveal">למה דווקא <mark>השקמה 19</mark>?</h2>
-        <p class="sect-sub reveal">שילוב נדיר של מיקום, נגישות ורמת גימור — בעיר שמתחדשת בקצב המהיר בישראל.</p>
-        <div class="cards">
-          <div class="card reveal"><span class="ico">🚈</span><h3>3 דקות מהרכבת הקלה</h3><p>חיבור ישיר למרכזי התעסוקה והתרבות של גוש דן — בלי פקקים ובלי חניות.</p></div>
-          <div class="card reveal"><span class="ico">🌊</span><h3>700 מטר מהים</h3><p>הליכה קצרה לחוף — ונוף שמשלב את ירוק הפארק עם כחול הים.</p></div>
-          <div class="card reveal"><span class="ico">🌳</span><h3>פארק צמוד לבית</h3><p>ריאה ירוקה ממש ליד — מרחב לילדים, לספורט ולשקט של אחרי העבודה.</p></div>
-          <div class="card reveal"><span class="ico">🏫</span><h3>2 בתי ספר סמוכים</h3><p>חינוך במרחק הליכה — בלי הסעות בבוקר.</p></div>
-          <div class="card reveal"><span class="ico">🍽️</span><h3>מפרט פרימיום</h3><p>מטבחי יוקרה של סמל, דלתות פנים מעוצבות של פנדור עם בידוד אקוסטי — איכות בלי פשרות.</p></div>
-          <div class="card reveal"><span class="ico">🔑</span><h3>אכלוס תוך חודשיים</h3><p>לא קונים על הנייר — נכנסים לדירה חדשה כבר בקרוב.</p></div>
+        <div class="cards" style="margin-top:26px">
+          <div class="card reveal"><span class="ico">🌊</span><h3>שכונה של הליכה</h3><p>חוף הים, פארק ושני בתי ספר, הכול במרחק הליכה מהבית.</p></div>
+          <div class="card reveal"><span class="ico">🚈</span><h3>מחוברים לגוש דן</h3><p>הרכבת הקלה לוקחת אתכם לכל מקום, בלי רכב ובלי פקקים.</p></div>
+          <div class="card reveal"><span class="ico">🍽️</span><h3>מפרט פרימיום</h3><p>מטבחי יוקרה של סמל ודלתות פנים של פנדור עם בידוד אקוסטי.</p></div>
+          <div class="card reveal"><span class="ico">🔑</span><h3>לא קונים על הנייר</h3><p>הבניין בנוי, הדירות מוכנות, והמפתח מחכה לכם.</p></div>
         </div>
       </div>
     </section>
@@ -260,13 +332,11 @@
     <section id="gallery">
       <div class="wrap">
         <h2 class="display reveal">הצצה <mark>לפרויקט</mark></h2>
-        <p class="sect-sub reveal">הדמיות הפרויקט — ואת התמונה המלאה רואים בסיור.</p>
-        <div class="gallery reveal">
-          <a href="./images/building-1.jpg" target="_blank" rel="noopener"><img src="./images/building-1.jpg" alt="הדמיית הבניין — מבט מהרחוב בשעת שקיעה" loading="lazy" /></a>
-          <a href="./images/building-2.jpg" target="_blank" rel="noopener"><img src="./images/building-2.jpg" alt="הדמיית הבניין — חזית עם מרפסות מוארות" loading="lazy" /></a>
-          <a href="./images/building-3.jpg" target="_blank" rel="noopener"><img src="./images/building-3.jpg" alt="הדמיית הבניין — מבט פינתי על הפרויקט" loading="lazy" /></a>
+        <div class="gallery reveal" style="margin-top:26px">
+          <a href="./images/building-1.jpg" target="_blank" rel="noopener"><img src="./images/building-1.jpg" alt="הבניין בהשקמה 19, מבט מהרחוב" loading="lazy" /></a>
+          <a href="./images/building-2.jpg" target="_blank" rel="noopener"><img src="./images/building-2.jpg" alt="חזית הבניין עם מרפסות מוארות" loading="lazy" /></a>
+          <a href="./images/building-3.jpg" target="_blank" rel="noopener"><img src="./images/building-3.jpg" alt="מבט פינתי על הבניין" loading="lazy" /></a>
         </div>
-        <p class="gallery__note">הדמיות באדיבות היזם · להמחשה בלבד</p>
       </div>
     </section>
 
@@ -275,10 +345,10 @@
         <div class="tour reveal">
           <div>
             <h2 class="display">סיור היכרות בשטח</h2>
-            <p class="sect-sub" style="margin-bottom:0">רואים את הפרויקט, את הדירה ואת השכונה — ושואלים את כל השאלות. ללא עלות וללא התחייבות.</p>
+            <p class="sect-sub" style="margin-bottom:0">רואים את הדירה ואת השכונה מקרוב ושואלים כל שאלה. ללא עלות וללא התחייבות.</p>
             <div class="tour__when">
               <div class="when-row"><span class="ico">📅</span><div><b>יום שישי, 28.08.2026</b><span>השעה המדויקת ופרטי ההגעה יישלחו אליכם בוואטסאפ מיד עם ההרשמה</span></div></div>
-              <div class="when-row"><span class="ico">📍</span><div><b>רחוב השקמה 19, בת ים</b><span>נקודת המפגש — בכניסה לפרויקט</span></div></div>
+              <div class="when-row"><span class="ico">📍</span><div><b>רחוב השקמה 19, בת ים</b><span>נקודת המפגש בכניסה לפרויקט</span></div></div>
               <div class="when-row"><span class="ico">💬</span><div><b>אישור ותזכורות בוואטסאפ</b><span>נשלח אישור הרשמה, תזכורת יום לפני ותזכורת בבוקר הסיור</span></div></div>
             </div>
           </div>
@@ -306,7 +376,7 @@
 
   <footer>
     <div class="wrap">
-      שווים יותר · פרויקט השקמה 19, בת ים · יזם: רויאל גארדן · ט.ל.ח — הפרטים והמחיר כפופים לעדכוני היזם
+      שווים יותר · פרויקט השקמה 19, בת ים · יזם: רויאל גארדן · ט.ל.ח. הפרטים והמחיר כפופים לעדכוני היזם
     </div>
   </footer>
 

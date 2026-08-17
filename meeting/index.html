@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#e9f1f8" />
 
   <title>השקמה 19 בת ים · פגישה אישית במשרדי המכירות | שווים יותר</title>
-  <meta name="description" content="דירת 5 חדרים חדשה בפרויקט השקמה 19 בת ים — 3 דקות מהרכבת הקלה, 700 מטר מהים, אכלוס תוך חודשיים. קבעו פגישה אישית במשרדי המכירות: תוכניות, מפרט ותנאי תשלום — במועד שנוח לכם." />
+  <meta name="description" content="דירת 5 חדרים חדשה בפרויקט השקמה 19 בת ים, 1,000,000 ₪ מתחת למחיר הממוצע בעיר. קבעו פגישה אישית במשרדי המכירות: תוכניות, מפרט ותנאי תשלום, במועד שנוח לכם." />
   <meta property="og:title" content="השקמה 19 בת ים · פגישה אישית במשרדי המכירות | שווים יותר" />
-  <meta property="og:description" content="5 חדרים ב-2,490,000 ₪ · 3 דקות מהרכבת הקלה · 700 מ' מהים · אכלוס תוך חודשיים. קבעו פגישה אישית במשרדי המכירות — כל הפרטים על השולחן." />
+  <meta property="og:description" content="5 חדרים ב-2,490,000 ₪, מיליון מתחת לממוצע העיר. נותרו 5 דירות בלבד. קבעו פגישה אישית במשרדי המכירות, כל הפרטים על השולחן." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="he_IL" />
   <meta property="og:image" content="https://shavimyoter2024-a11y.github.io/batyam/images/building-1.jpg" />
@@ -117,9 +117,20 @@
       box-shadow: 0 6px 18px rgba(31,58,88,.14);
     }
 
+    .price-hero {
+      margin-top: 36px; text-align: center;
+      background: linear-gradient(135deg, rgba(232,189,87,.42), rgba(255,255,255,.6));
+      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(201,152,46,.55); border-radius: 22px;
+      padding: 24px 20px 20px; box-shadow: 0 16px 38px rgba(201,152,46,.24);
+    }
+    .price-hero .label { display: block; font-weight: 700; font-size: 15px; color: #7a5c12; margin-bottom: 2px; }
+    .price-hero b { display: block; font-family: "Heebo"; font-weight: 900; font-size: clamp(40px, 8vw, 58px); letter-spacing: -1.5px; color: #2b2109; line-height: 1.08; }
+    .price-hero .note { display: block; font-size: 14.5px; color: var(--muted); margin-top: 6px; }
+
     .stats {
       display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px;
-      margin-top: 40px;
+      margin-top: 12px;
     }
     .stat {
       background: var(--glass); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
@@ -179,6 +190,26 @@
 
     .reveal { opacity: 0; transform: translateY(22px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
     .reveal.in { opacity: 1; transform: none; }
+
+    /* מובייל: הכול מיושר למרכז וקומפקטי */
+    @media (max-width: 720px) {
+      .hero { padding: 100px 0 26px; }
+      .hero__grid { gap: 22px; }
+      .hero__grid > div:first-child { text-align: center; }
+      .hero__kicker { font-size: 13px; padding: 6px 13px; }
+      .hero__sub { margin-inline: auto; }
+      .hero__cta-row { flex-direction: column; align-items: stretch; gap: 12px; }
+      .btn-main { width: 100%; justify-content: center; }
+      .hero__alt { text-align: center; }
+      .hero__media { padding: 9px; }
+      .price-hero { margin-top: 26px; }
+      .stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .stat { text-align: center; padding: 14px 10px; }
+      section { padding: 34px 0; }
+      h2, .sect-sub { text-align: center; }
+      .sect-sub { margin-inline: auto; }
+      footer { text-align: center; }
+    }
   </style>
 </head>
 <body>
@@ -195,21 +226,25 @@
         <div class="hero__grid">
           <div>
             <span class="hero__kicker"><span class="pulse"></span> פגישה אישית במשרדי המכירות · ללא עלות וללא התחייבות</span>
-            <h1 class="display">כל הפרטים על השולחן —<br /><em>פגישה אישית במשרדי המכירות.</em></h1>
-            <p class="hero__sub">רוצים לרדת לפרטים של השקמה 19? בפגישה אישית במשרדי המכירות של רויאל גארדן עוברים יחד על תוכניות הדירה, המפרט הטכני, המחיר ותנאי התשלום — ומקבלים תשובות על כל שאלה, פנים מול פנים. אתם בוחרים את המועד.</p>
+            <h1 class="display">כל הפרטים על השולחן,<br /><em>פגישה אישית במשרדי המכירות.</em></h1>
+            <p class="hero__sub">בפגישה במשרדי המכירות של רויאל גארדן עוברים יחד על תוכניות הדירה, המפרט, המחיר ותנאי התשלום. אתם בוחרים את המועד.</p>
             <div class="hero__cta-row">
               <a class="btn-main" href="#register">קובעים פגישה אישית</a>
               <span class="hero__alt">מעדיפים לראות מקרוב? <a href="../" id="tourLink">הירשמו לסיור בשטח ›</a></span>
             </div>
           </div>
           <div class="hero__media reveal">
-            <img src="../images/building-1.jpg" alt="הדמיית פרויקט השקמה 19 בת ים — בניין מגורים חדש עם מרפסות" width="2191" height="1578" fetchpriority="high" />
-            <span class="tag">הדמיה · השקמה 19, בת ים</span>
+            <img src="../images/building-1.jpg" alt="פרויקט השקמה 19 בת ים, בניין מגורים חדש עם מרפסות" width="2191" height="1578" fetchpriority="high" />
+            <span class="tag">השקמה 19, בת ים</span>
           </div>
         </div>
+        <div class="price-hero reveal">
+          <span class="label">מחיר הדירה בהשקמה 19</span>
+          <b>2,490,000 ₪</b>
+          <span class="note">1,000,000 ₪ מתחת למחיר הממוצע לדירת 5 חדרים בבת ים (מדלן)</span>
+        </div>
         <div class="stats reveal">
-          <div class="stat"><b>5 חדרים</b><span>דירה מרווחת</span></div>
-          <div class="stat"><b>2,490,000 ₪</b><span>מחיר הדירה</span></div>
+          <div class="stat"><b>5 דירות</b><span>בלבד נותרו למכירה</span></div>
           <div class="stat"><b>3 דק'</b><span>הליכה לרכבת הקלה</span></div>
           <div class="stat"><b>700 מ'</b><span>מקו החוף</span></div>
           <div class="stat"><b>חודשיים</b><span>עד אכלוס</span></div>
@@ -222,12 +257,12 @@
         <div class="meet reveal">
           <div>
             <h2 class="display">פגישה אישית במשרדי המכירות</h2>
-            <p class="sect-sub" style="margin-bottom:0">שעה אחת שחוסכת שבועות של התלבטות: תוכניות, מפרט, מחיר ותנאי תשלום — הכול פתוח על השולחן, בגובה העיניים.</p>
+            <p class="sect-sub" style="margin-bottom:0">שעה אחת שחוסכת שבועות של התלבטות: תוכניות, מפרט, מחיר ותנאי תשלום, הכול פתוח על השולחן.</p>
             <div class="meet__points">
-              <div class="point"><span class="ico">🏢</span><div><b>במשרדי המכירות של היזם</b><span>פוגשים את הצוות של רויאל גארדן — רואים תוכניות, הדמיות ומפרט מקרוב</span></div></div>
-              <div class="point"><span class="ico">🗓️</span><div><b>אתם בוחרים מתי</b><span>מיד אחרי השארת הפרטים ייפתח יומן — בוחרים יום ושעה שנוחים לכם</span></div></div>
+              <div class="point"><span class="ico">🏢</span><div><b>במשרדי המכירות של היזם</b><span>פוגשים את הצוות של רויאל גארדן ורואים תוכניות ומפרט מקרוב</span></div></div>
+              <div class="point"><span class="ico">🗓️</span><div><b>אתם בוחרים מתי</b><span>מיד אחרי השארת הפרטים ייפתח יומן לבחירת יום ושעה</span></div></div>
               <div class="point"><span class="ico">💬</span><div><b>אישור בוואטסאפ</b><span>אישור הפגישה, הכתובת וכל הפרטים יישלחו אליכם מיד</span></div></div>
-              <div class="point"><span class="ico">🤝</span><div><b>ללא עלות וללא התחייבות</b><span>באים, שואלים, מקבלים את כל המספרים — ומחליטים בשקט</span></div></div>
+              <div class="point"><span class="ico">🤝</span><div><b>ללא עלות וללא התחייבות</b><span>באים, שואלים, מקבלים את כל המספרים ומחליטים בשקט</span></div></div>
             </div>
           </div>
           <div>
@@ -256,7 +291,7 @@
 
   <footer>
     <div class="wrap">
-      שווים יותר · פרויקט השקמה 19, בת ים · יזם: רויאל גארדן · ט.ל.ח — הפרטים והמחיר כפופים לעדכוני היזם
+      שווים יותר · פרויקט השקמה 19, בת ים · יזם: רויאל גארדן · ט.ל.ח. הפרטים והמחיר כפופים לעדכוני היזם
     </div>
   </footer>
 
