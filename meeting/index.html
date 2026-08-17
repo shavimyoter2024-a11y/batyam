@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a2410" />
+
+  <title>השקמה 19 בת ים · קביעת פגישת ייעוץ | שווים יותר</title>
+  <meta name="description" content="דירת 5 חדרים חדשה בפרויקט השקמה 19 בת ים — 3 דקות מהרכבת הקלה, 700 מטר מהים, אכלוס תוך חודשיים. השאירו פרטים וקבעו פגישת ייעוץ אישית במועד שנוח לכם." />
+  <meta property="og:title" content="השקמה 19 בת ים · פגישת ייעוץ אישית | שווים יותר" />
+  <meta property="og:description" content="5 חדרים ב-2,490,000 ₪ · 3 דקות מהרכבת הקלה · 700 מ' מהים · אכלוס תוך חודשיים. קבעו פגישת ייעוץ אישית — ללא עלות." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="he_IL" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&family=Assistant:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:        #1a2410;
+      --bg-lift:   #232f18;
+      --card:      #202b14;
+      --gold:      #e8bd57;
+      --gold-deep: #d3a83f;
+      --gold-soft: rgba(232,189,87,.12);
+      --cream:     #f3eeda;
+      --muted:     rgba(243,238,218,.66);
+      --line:      rgba(243,238,218,.14);
+      --line-2:    rgba(243,238,218,.3);
+      --bad:       #ffb4a8;
+      --maxw: 1180px;
+      --ease: cubic-bezier(.22,1,.36,1);
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; overflow-x: hidden; }
+    a, button { -webkit-tap-highlight-color: transparent; }
+    body {
+      margin: 0; background: var(--bg); color: var(--cream);
+      font-family: "Assistant", "Segoe UI", "Arial Hebrew", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased; overflow-x: hidden; line-height: 1.55;
+    }
+    a { color: inherit; text-decoration: none; }
+    ::selection { background: var(--gold); color: #1a2410; }
+    .display { font-family: "Heebo", "Assistant", sans-serif; }
+    .wrap { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: 26px; }
+
+    .topbar {
+      position: fixed; inset: 0 0 auto 0; z-index: 40;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 26px;
+      background: rgba(26,36,16,.86); backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .brand__name { font-family: "Heebo", sans-serif; font-weight: 900; font-size: 26px; letter-spacing: -.6px; line-height: 1; }
+    .brand__name b { color: var(--gold); }
+    .topbar__cta { background: var(--gold); color: #1a2410; font-weight: 700; font-size: 15px; padding: 10px 22px; border-radius: 100px; transition: background .25s; }
+    .topbar__cta:hover { background: var(--gold-deep); }
+
+    .hero { padding: 128px 0 44px; position: relative; }
+    .hero::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(700px 340px at 82% -10%, rgba(232,189,87,.14), transparent 65%);
+    }
+    .hero__kicker {
+      display: inline-flex; align-items: center; gap: 9px;
+      font-size: 14.5px; font-weight: 600; color: var(--gold);
+      border: 1px solid rgba(232,189,87,.4); border-radius: 100px; padding: 7px 16px;
+      margin-bottom: 22px;
+    }
+    .hero__kicker .pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 0 rgba(232,189,87,.4); animation: pulse 2.4s infinite; }
+    @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(232,189,87,.4)} 70%{box-shadow:0 0 0 9px rgba(232,189,87,0)} 100%{box-shadow:0 0 0 0 rgba(232,189,87,0)} }
+    h1 { font-family: "Heebo", sans-serif; font-weight: 900; font-size: clamp(34px, 6vw, 58px); line-height: 1.12; letter-spacing: -1.2px; margin: 0 0 16px; }
+    h1 em { font-style: normal; color: var(--gold); }
+    .hero__sub { font-size: clamp(17px, 2.4vw, 20px); color: var(--muted); max-width: 640px; margin: 0 0 30px; }
+    .hero__cta-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-bottom: 34px; }
+    .btn-main {
+      display: inline-flex; align-items: center; gap: 10px; cursor: pointer; border: 0;
+      background: var(--gold); color: #1a2410; font-family: "Assistant"; font-weight: 700;
+      font-size: 17.5px; padding: 16px 36px; border-radius: 100px;
+      transition: transform .5s var(--ease), background .25s;
+    }
+    .btn-main:hover { background: var(--gold-deep); transform: translateY(-2px); }
+    .hero__alt { font-size: 15.5px; color: var(--muted); }
+    .hero__alt a { color: var(--gold); font-weight: 600; border-bottom: 1px solid rgba(232,189,87,.4); }
+
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; }
+    .stat { background: var(--card); padding: 20px 18px; }
+    .stat b { display: block; font-family: "Heebo"; font-weight: 800; font-size: clamp(19px, 2.6vw, 25px); color: var(--gold); letter-spacing: -.4px; margin-bottom: 3px; }
+    .stat span { font-size: 14px; color: var(--muted); }
+
+    section { padding: 54px 0; }
+    h2 { font-family: "Heebo", sans-serif; font-weight: 800; font-size: clamp(25px, 4vw, 36px); letter-spacing: -.8px; margin: 0 0 8px; }
+    .sect-sub { color: var(--muted); font-size: 17px; margin: 0 0 32px; max-width: 620px; }
+
+    .meet {
+      background: var(--card); border: 1px solid rgba(232,189,87,.35); border-radius: 22px;
+      padding: clamp(26px, 5vw, 44px); display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(24px, 5vw, 56px); align-items: start;
+    }
+    @media (max-width: 860px) { .meet { grid-template-columns: 1fr; } }
+    .meet__points { display: flex; flex-direction: column; gap: 14px; margin: 22px 0 0; }
+    .point { display: flex; gap: 13px; align-items: flex-start; }
+    .point .ico { flex: 0 0 auto; width: 40px; height: 40px; border-radius: 12px; background: var(--gold-soft); display: grid; place-items: center; font-size: 19px; }
+    .point b { display: block; font-size: 16.5px; }
+    .point span { color: var(--muted); font-size: 14.5px; }
+
+    .field { margin-bottom: 15px; }
+    .field label { display: block; font-weight: 600; font-size: 14.5px; margin-bottom: 6px; }
+    .field input {
+      width: 100%; background: var(--bg); color: var(--cream);
+      border: 1px solid var(--line-2); border-radius: 12px; padding: 13px 15px;
+      font: inherit; font-size: 16px; transition: border-color .25s;
+    }
+    .field input:focus { outline: none; border-color: var(--gold); }
+    .field.bad input { border-color: var(--bad); }
+    .field .ltr { direction: ltr; text-align: left; }
+    .consent { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: var(--muted); margin: 4px 0 18px; }
+    .consent input { margin-top: 3px; accent-color: var(--gold); }
+    .consent.bad { color: var(--bad); }
+    .form-msg { min-height: 22px; font-size: 14.5px; margin-top: 12px; }
+    .form-msg.err { color: var(--bad); font-weight: 600; }
+    .form-note { font-size: 13px; color: var(--muted); margin-top: 14px; }
+    .hp { position: absolute; left: -9999px; top: -9999px; }
+
+    .success {
+      background: var(--gold-soft); border: 1px solid rgba(232,189,87,.5); border-radius: 18px;
+      padding: 26px 22px; text-align: center;
+    }
+    .success h3 { font-family: "Heebo"; font-weight: 800; font-size: 23px; margin: 0 0 8px; color: var(--gold); }
+    .success p { margin: 0 0 6px; color: var(--cream); font-size: 16px; }
+    #calendlyBox { margin-top: 18px; border-radius: 14px; overflow: hidden; background: #fff; min-height: 640px; display: none; }
+    #calendlyBox.show { display: block; }
+    .success .fallback { font-size: 14px; color: var(--muted); margin-top: 10px; }
+
+    footer { border-top: 1px solid var(--line); padding: 26px 0 34px; color: var(--muted); font-size: 13.5px; }
+
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+    .reveal.in { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand"><span class="brand__name">שווים <b>יותר</b></span></div>
+    <a class="topbar__cta" href="#register">לקביעת פגישה</a>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="wrap">
+        <span class="hero__kicker"><span class="pulse"></span> פגישת ייעוץ אישית · ללא עלות וללא התחייבות</span>
+        <h1 class="display">מתלבטים? בואו נדבר על<br /><em>השקמה 19, בת ים.</em></h1>
+        <p class="hero__sub">דירת 5 חדרים חדשה, 3 דקות מהרכבת הקלה ו-700 מטר מהים — עם אכלוס כבר בעוד חודשיים. השאירו פרטים, בחרו מועד שנוח לכם, ונעבור יחד על כל מה שחשוב לדעת לפני ההחלטה.</p>
+        <div class="hero__cta-row">
+          <a class="btn-main" href="#register">קובעים פגישת ייעוץ</a>
+          <span class="hero__alt">מעדיפים לראות מקרוב? <a href="../" id="tourLink">הירשמו לסיור בשטח ›</a></span>
+        </div>
+        <div class="stats reveal">
+          <div class="stat"><b>5 חדרים</b><span>דירה מרווחת</span></div>
+          <div class="stat"><b>2,490,000 ₪</b><span>מחיר הדירה</span></div>
+          <div class="stat"><b>3 דק'</b><span>הליכה לרכבת הקלה</span></div>
+          <div class="stat"><b>700 מ'</b><span>מקו החוף</span></div>
+          <div class="stat"><b>חודשיים</b><span>עד אכלוס</span></div>
+        </div>
+      </div>
+    </div>
+
+    <section id="register">
+      <div class="wrap">
+        <div class="meet reveal">
+          <div>
+            <h2 class="display">פגישת ייעוץ אישית</h2>
+            <p class="sect-sub" style="margin-bottom:0">שיחה ממוקדת על הצרכים שלכם — מחיר, מימון, לוחות זמנים והתאמה למשפחה. אתם בוחרים את המועד.</p>
+            <div class="meet__points">
+              <div class="point"><span class="ico">🗓️</span><div><b>אתם בוחרים מתי</b><span>מיד אחרי השארת הפרטים ייפתח יומן — בוחרים יום ושעה שנוחים לכם</span></div></div>
+              <div class="point"><span class="ico">💬</span><div><b>אישור בוואטסאפ</b><span>אישור הפגישה והפרטים יישלחו אליכם מיד</span></div></div>
+              <div class="point"><span class="ico">🤝</span><div><b>ללא עלות וללא התחייבות</b><span>פגישת היכרות — כל השאלות פתוחות</span></div></div>
+            </div>
+          </div>
+          <div>
+            <form id="meetForm" novalidate>
+              <div class="field"><label for="firstname">שם פרטי *</label><input type="text" id="firstname" name="firstname" autocomplete="given-name" required /></div>
+              <div class="field"><label for="lastname">שם משפחה *</label><input type="text" id="lastname" name="lastname" autocomplete="family-name" required /></div>
+              <div class="field"><label for="phone">טלפון נייד *</label><input type="tel" id="phone" name="phone" class="ltr" dir="ltr" autocomplete="tel" inputmode="tel" placeholder="050-1234567" required /></div>
+              <div class="field"><label for="email">אימייל *</label><input type="email" id="email" name="email" class="ltr" dir="ltr" autocomplete="email" inputmode="email" placeholder="name@example.com" required /></div>
+              <div class="hp" aria-hidden="true"><label>אתר<input type="text" name="hp_website" tabindex="-1" autocomplete="off" /></label></div>
+              <label class="consent"><input type="checkbox" name="consent" /> <span>אני מאשר/ת קבלת פנייה חוזרת ועדכונים על הפגישה בוואטסאפ ובמייל. *</span></label>
+              <button type="submit" class="btn-main" id="submitBtn" style="width:100%; justify-content:center">ממשיכים לבחירת מועד</button>
+              <p class="form-msg" id="formMsg" role="alert" aria-live="polite"></p>
+              <p class="form-note">הפרטים משמשים לתיאום הפגישה בלבד ולא יועברו לגורם שלישי.</p>
+            </form>
+            <div class="success" id="formSuccess" hidden tabindex="-1">
+              <h3>הפרטים התקבלו! 🎉</h3>
+              <p>עכשיו נשאר רק לבחור מועד לפגישה:</p>
+              <div id="calendlyBox"></div>
+              <p class="fallback" id="calendlyFallback">היומן ייפתח כאן בעוד רגע. אם הוא לא נטען — ניצור איתכם קשר בוואטסאפ לתיאום המועד.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      שווים יותר · פרויקט השקמה 19, בת ים · יזם: רויאל גארדן · ט.ל.ח — הפרטים והמחיר כפופים לעדכוני היזם
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      // ⚠️ להשלים אחרי שטום יוצר אירוע בקלנדלי — כתובת ה-event המלאה.
+      // ריק = הטופס עדיין עובד והליד נקלט בפיירברי; במקום היומן תוצג הודעת "ניצור קשר לתיאום".
+      var CALENDLY_EVENT_URL = "";
+
+      var utm = { source: "", medium: "" };
+      try {
+        var qs = new URLSearchParams(location.search);
+        if (!qs.keys().next().value && location.hash.indexOf("=") > -1) {
+          qs = new URLSearchParams(location.hash.replace(/^#\??/, ""));
+        }
+        utm.source = (qs.get("utm_source") || qs.get("source") || "").slice(0, 60);
+        utm.medium = (qs.get("utm_medium") || qs.get("medium") || "").slice(0, 60);
+      } catch (e) {}
+
+      try {
+        var tl = document.getElementById("tourLink");
+        if (tl && location.search) tl.href += location.search;
+      } catch (e) {}
+
+      var FORM_WEBHOOK_URL = "https://hook.eu2.make.com/gv43ymbn3hbxyf6xv9mvvr6249lfm4l6";
+      var PAGE_ID = "batyam-meeting";
+
+      var form = document.getElementById("meetForm");
+      var msg = document.getElementById("formMsg");
+      var btn = document.getElementById("submitBtn");
+      var success = document.getElementById("formSuccess");
+      if (!form) return;
+
+      var mark = function (el, bad) {
+        var wrap = el.closest(".field") || el.closest(".consent");
+        if (wrap) wrap.classList.toggle("bad", bad);
+        try { el.setAttribute("aria-invalid", bad ? "true" : "false"); } catch (e2) {}
+      };
+
+      var openCalendly = function (name, email, phone) {
+        if (!CALENDLY_EVENT_URL) return;
+        var box = document.getElementById("calendlyBox");
+        var url = CALENDLY_EVENT_URL
+          + (CALENDLY_EVENT_URL.indexOf("?") > -1 ? "&" : "?")
+          + "hide_gdpr_banner=1&name=" + encodeURIComponent(name)
+          + "&email=" + encodeURIComponent(email)
+          + "&a1=" + encodeURIComponent(phone)
+          + (utm.source ? "&utm_source=" + encodeURIComponent(utm.source) : "")
+          + (utm.medium ? "&utm_medium=" + encodeURIComponent(utm.medium) : "");
+        var f = document.createElement("iframe");
+        f.src = url; f.style.cssText = "width:100%;height:640px;border:0";
+        f.title = "בחירת מועד לפגישה";
+        box.appendChild(f); box.classList.add("show");
+        document.getElementById("calendlyFallback").textContent = "לא מסתדר עם היומן? אין בעיה — ניצור איתכם קשר בוואטסאפ לתיאום.";
+      };
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        msg.classList.remove("err"); msg.textContent = "";
+        var val = function (n) { return (form[n] && form[n].value || "").trim(); };
+        var phone = val("phone").replace(/[\s\-()]/g, "").replace(/^\+?972/, "0");
+
+        var checks = [
+          [form.firstname, !!val("firstname")],
+          [form.lastname,  !!val("lastname")],
+          [form.phone,     /^0\d{8,9}$/.test(phone)],
+          [form.email,     /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(val("email"))],
+          [form.consent,   form.consent.checked]
+        ];
+        var firstBad = null;
+        checks.forEach(function (c) { mark(c[0], !c[1]); if (!c[1] && !firstBad) firstBad = c[0]; });
+        if (firstBad) {
+          msg.classList.add("err");
+          msg.textContent = firstBad === form.phone ? "בדקו שמספר הטלפון תקין (למשל 050-1234567) ונסו שוב."
+                          : firstBad === form.email ? "בדקו שכתובת המייל תקינה ונסו שוב."
+                          : firstBad === form.consent ? "כדי להמשיך יש לאשר קבלת פנייה חוזרת."
+                          : "יש להשלים את שדות החובה המסומנים.";
+          firstBad.closest(".field, .consent").scrollIntoView({ behavior: "smooth", block: "center" });
+          return;
+        }
+        if (val("hp_website")) { form.hidden = true; success.hidden = false; return; }
+
+        btn.disabled = true;
+        msg.textContent = "הפרטים נשלחים…";
+        var body = new URLSearchParams({
+          type: "meeting",
+          page: PAGE_ID,
+          firstname: val("firstname"),
+          lastname: val("lastname"),
+          email: val("email"),
+          phone: phone,
+          utm_source: utm.source,
+          utm_medium: utm.medium,
+          client_time: new Date().toISOString()
+        });
+        fetch(FORM_WEBHOOK_URL, {
+          method: "POST", mode: "no-cors",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: body.toString()
+        }).then(function () {
+          form.hidden = true; success.hidden = false;
+          openCalendly(val("firstname") + " " + val("lastname"), val("email"), phone);
+          try { success.focus({ preventScroll: true }); } catch (e3) {}
+          success.scrollIntoView({ behavior: "smooth", block: "center" });
+        }).catch(function () {
+          btn.disabled = false;
+          msg.classList.add("err");
+          msg.textContent = "משהו השתבש בשליחה. נסו שוב בעוד רגע.";
+        });
+      });
+
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+      }, { threshold: .12 });
+      document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>
