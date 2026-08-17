@@ -31,7 +31,7 @@
       --g-shadow:  0 18px 44px rgba(31,58,88,.14);
       --line-2:    rgba(28,42,58,.22);
       --bad:       #c2402e;
-      --maxw: 1180px;
+      --maxw: 1100px;
       --ease: cubic-bezier(.22,1,.36,1);
     }
     * { box-sizing: border-box; }
@@ -118,7 +118,7 @@
     }
 
     .price-hero {
-      margin-top: 36px; text-align: center;
+      margin: 36px auto 0; max-width: 760px; text-align: center;
       background: linear-gradient(135deg, rgba(232,189,87,.42), rgba(255,255,255,.6));
       backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
       border: 1px solid rgba(201,152,46,.55); border-radius: 22px;
@@ -130,7 +130,7 @@
 
     .stats {
       display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px;
-      margin-top: 12px;
+      margin: 12px auto 0; max-width: 920px;
     }
     .stat {
       background: var(--glass); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
@@ -143,6 +143,39 @@
     section { padding: 50px 0; }
     h2 { font-family: "Heebo", sans-serif; font-weight: 800; font-size: clamp(25px, 4vw, 36px); letter-spacing: -.8px; margin: 0 0 8px; }
     .sect-sub { color: var(--muted); font-size: 17px; margin: 0 0 30px; max-width: 620px; }
+    mark { background: var(--gold-soft); color: var(--gold-deep); padding: 0 4px; border-radius: 4px; }
+
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    .card {
+      background: var(--glass); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--g-border); border-radius: 20px; padding: 24px 22px;
+      box-shadow: 0 10px 26px rgba(31,58,88,.07);
+      transition: transform .5s var(--ease), background .3s;
+    }
+    .card:hover { transform: translateY(-4px); background: var(--glass-hi); }
+    .card .ico { font-size: 26px; margin-bottom: 12px; display: block; }
+    .card h3 { font-family: "Heebo"; font-weight: 700; font-size: 18.5px; margin: 0 0 6px; }
+    .card p { margin: 0; color: var(--muted); font-size: 15.5px; }
+
+    .gallery { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 14px; }
+    @media (max-width: 720px) { .gallery { grid-template-columns: 1fr 1fr; } .gallery a:first-child { grid-column: 1 / -1; } }
+    .gallery a {
+      display: block; border-radius: 20px; overflow: hidden; position: relative;
+      border: 1px solid var(--g-border); box-shadow: 0 10px 26px rgba(31,58,88,.1);
+      background: var(--glass);
+    }
+    .gallery img { display: block; width: 100%; height: 100%; min-height: 180px; object-fit: cover; transition: transform .8s var(--ease); }
+    .gallery a:hover img { transform: scale(1.04); }
+
+    .madlan { display: grid; grid-template-columns: 1fr .85fr; gap: clamp(24px, 4vw, 48px); align-items: center; }
+    @media (max-width: 860px) { .madlan { grid-template-columns: 1fr; } }
+    .madlan__img {
+      border-radius: 22px; padding: 10px; max-width: 420px; margin-inline: auto;
+      background: var(--glass); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--g-border); box-shadow: var(--g-shadow);
+    }
+    .madlan__img img { display: block; width: 100%; height: auto; border-radius: 14px; }
+    .madlan__src { font-size: 13px; color: var(--muted); text-align: center; margin: 10px 0 2px; }
 
     .meet {
       background: var(--glass); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
@@ -215,6 +248,8 @@
       section { padding: 34px 0; }
       h2, .sect-sub { text-align: center; }
       .sect-sub { margin-inline: auto; }
+      .card { text-align: center; }
+      .card .ico { margin-inline: auto; }
       footer { text-align: center; }
     }
   </style>
@@ -258,6 +293,46 @@
         </div>
       </div>
     </div>
+
+    <section id="market">
+      <div class="wrap">
+        <div class="madlan">
+          <div>
+            <h2 class="display reveal">המחיר הזה נשמע טוב מכדי להיות אמיתי?</h2>
+            <p class="sect-sub reveal" style="margin-bottom:0">בדקו בעצמכם. כך נראות מגמות המחירים של דירות 5 חדרים בבת ים באתר מדלן. ההזדמנות הזאת קיימת רק כי היזם רוצה לסיים את המכירה לפני האכלוס.</p>
+          </div>
+          <div>
+            <div class="madlan__img reveal">
+              <img src="../images/madlan-graph.jpg" alt="גרף מגמות מחירים ממדלן: דירת 5 חדרים בבת ים בממוצע 3.49 מיליון שקלים" loading="lazy" />
+            </div>
+            <p class="madlan__src">מקור: madlan.co.il, עדכון 15.8.2026</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2 class="display reveal">למה דווקא <mark>השקמה 19</mark>?</h2>
+        <div class="cards" style="margin-top:26px">
+          <div class="card reveal"><span class="ico">🌊</span><h3>הכל במרחק הליכה</h3><p>חוף הים, פארק ושני בתי ספר, הכול במרחק הליכה מהבית.</p></div>
+          <div class="card reveal"><span class="ico">🚈</span><h3>מחוברים לגוש דן</h3><p>הרכבת הקלה לוקחת אתכם לכל מקום, בלי רכב ובלי פקקים.</p></div>
+          <div class="card reveal"><span class="ico">🍽️</span><h3>מפרט פרימיום</h3><p>מטבחי יוקרה של סמל ודלתות פנים של פנדור עם בידוד אקוסטי.</p></div>
+          <div class="card reveal"><span class="ico">🔑</span><h3>לא קונים על הנייר</h3><p>הבניין בנוי, הדירות מוכנות, והמפתח מחכה לכם.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="wrap">
+        <h2 class="display reveal">הצצה <mark>לפרויקט</mark></h2>
+        <div class="gallery reveal" style="margin-top:26px">
+          <a href="../images/building-1.jpg" target="_blank" rel="noopener"><img src="../images/building-1.jpg" alt="הבניין בהשקמה 19, מבט מהרחוב" loading="lazy" /></a>
+          <a href="../images/building-2.jpg" target="_blank" rel="noopener"><img src="../images/building-2.jpg" alt="חזית הבניין עם מרפסות מוארות" loading="lazy" /></a>
+          <a href="../images/building-3.jpg" target="_blank" rel="noopener"><img src="../images/building-3.jpg" alt="מבט פינתי על הבניין" loading="lazy" /></a>
+        </div>
+      </div>
+    </section>
 
     <section id="register">
       <div class="wrap">
