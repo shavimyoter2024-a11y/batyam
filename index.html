@@ -340,6 +340,18 @@
       </div>
     </section>
 
+    <section id="developer">
+      <div class="wrap">
+        <h2 class="display reveal">היזם: <mark>רויאל גארדן נדל"ן</mark></h2>
+        <p class="sect-sub reveal">חברה ותיקה ומוערכת בענף, שבונה כבר שני עשורים שכונות, קוטג'ים ובנייני בוטיק ברחבי הארץ.</p>
+        <div class="cards">
+          <div class="card reveal"><span class="ico">🏗️</span><h3>ניסיון מוכח</h3><p>מאות בתים ודירות שנמסרו, מ-152 וילות בשכונת פרס נובל בראשון לציון ועד בנייני בוטיק בכפר סבא ובתל אביב.</p></div>
+          <div class="card reveal"><span class="ico">🤝</span><h3>אמון של רשויות</h3><p>החברה הכלכלית של ראשון לציון בחרה ברויאל גארדן לקדם פרויקטים של התחדשות עירונית בעיר.</p></div>
+          <div class="card reveal"><span class="ico">🏡</span><h3>מתמחים בבנייני בוטיק</h3><p>בשנים האחרונות החברה מתמקדת בבנייני בוטיק איכותיים, בדיוק כמו הפרויקט בהשקמה 19.</p></div>
+        </div>
+      </div>
+    </section>
+
     <section id="register">
       <div class="wrap">
         <div class="tour reveal">
@@ -347,7 +359,7 @@
             <h2 class="display">סיור היכרות בשטח</h2>
             <p class="sect-sub" style="margin-bottom:0">רואים את הדירה ואת השכונה מקרוב ושואלים כל שאלה. ללא עלות וללא התחייבות.</p>
             <div class="tour__when">
-              <div class="when-row"><span class="ico">📅</span><div><b>יום שישי, 28.08.2026</b><span>השעה המדויקת ופרטי ההגעה יישלחו אליכם בוואטסאפ מיד עם ההרשמה</span></div></div>
+              <div class="when-row"><span class="ico">📅</span><div><b>יום שישי, 28.08.2026 · <span id="tourHour">השעה תפורסם בקרוב</span></b><span>השעה המדויקת ופרטי ההגעה יישלחו אליכם בוואטסאפ מיד עם ההרשמה</span></div></div>
               <div class="when-row"><span class="ico">📍</span><div><b>רחוב השקמה 19, בת ים</b><span>נקודת המפגש בכניסה לפרויקט</span></div></div>
               <div class="when-row"><span class="ico">💬</span><div><b>אישור ותזכורות בוואטסאפ</b><span>נשלח אישור הרשמה, תזכורת יום לפני ותזכורת בבוקר הסיור</span></div></div>
             </div>
@@ -378,6 +390,7 @@
   <footer>
     <div class="wrap">
       שווים יותר · פרויקט השקמה 19, בת ים · יזם: רויאל גארדן · ט.ל.ח. הפרטים והמחיר כפופים לעדכוני היזם
+      <br />אין באמור בעמוד זה משום ייעוץ ו/או המלצה לרכישה או להשקעה מכל סוג, ואין בו תחליף לייעוץ מקצועי אישי.
     </div>
   </footer>
 
@@ -402,6 +415,19 @@
 
       var FORM_WEBHOOK_URL = "https://hook.eu2.make.com/gv43ymbn3hbxyf6xv9mvvr6249lfm4l6";
       var PAGE_ID = "batyam-tour";
+
+      // ספירת צפיות בדף (בלי פרטים אישיים)
+      try {
+        var viewBody = new URLSearchParams({
+          page: PAGE_ID,
+          utm_source: utm.source,
+          utm_medium: utm.medium,
+          referrer: (document.referrer || "").slice(0, 120)
+        });
+        var VIEW_WEBHOOK_URL = "https://hook.eu2.make.com/aeu1cjdwy3o26uis9d308bvj8lfhemf6";
+        if (navigator.sendBeacon) navigator.sendBeacon(VIEW_WEBHOOK_URL, viewBody);
+        else fetch(VIEW_WEBHOOK_URL, { method: "POST", mode: "no-cors", keepalive: true, headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: viewBody.toString() });
+      } catch (e0) {}
 
       var form = document.getElementById("tourForm");
       var msg = document.getElementById("formMsg");
